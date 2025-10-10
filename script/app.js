@@ -5,15 +5,16 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
 
 // ======== COLE SUA CONFIG AQUI (substitua os placeholders) ========
-// Vá ao Console Firebase > Config do projeto > SDK web
+
 const firebaseConfig = {
-  apiKey: "SUA_API_KEY",
-  authDomain: "SEU_AUTH_DOMAIN",
-  projectId: "SEU_PROJECT_ID",
-  storageBucket: "SEU_STORAGE_BUCKET",
-  messagingSenderId: "SEU_MESSAGING_SENDER_ID",
-  appId: "SEU_APP_ID"
+  apiKey: "AIzaSyDLGSuIt8I0OsHN5juy4GIFQBSR1Mhd-ns",
+  authDomain: "estacionamento-3634a.firebaseapp.com",
+  projectId: "estacionamento-3634a",
+  storageBucket: "estacionamento-3634a.firebasestorage.app",
+  messagingSenderId: "1072827896239",
+  appId: "1:1072827896239:web:581e0ca9064afe1b41df5a"
 };
+
 // =================================================================
 
 let firestore = null;
@@ -42,7 +43,7 @@ function getSession() {
 function requireAuthOrRedirect() {
   const session = getSession();
   if (!session) {
-    window.location.href = "login.html";
+    window.location.href = "/public/login.html";
     return null;
   }
   return session;
@@ -71,7 +72,7 @@ function renderUserArea() {
   `;
   document.getElementById("btnLogout").addEventListener("click", () => {
     localStorage.removeItem(SESSION_KEY);
-    window.location.href = "login.html";
+    window.location.href = "/public/login.html";
   });
 }
 

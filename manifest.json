@@ -1,7 +1,7 @@
 {
-  "name": "GitHub",
-  "short_name": "GitHub",
-  "start_url": "/",
+  "name": "estacionamento",
+  "short_name": "stop",
+  "start_url": "https://github.com/Luiz-M-Ribeiro/estacionamento",
   "display": "standalone",
   "icons": [
     {
