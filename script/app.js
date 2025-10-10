@@ -10,7 +10,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyDLGSuIt8I0OsHN5juy4GIFQBSR1Mhd-ns",
   authDomain: "estacionamento-3634a.firebaseapp.com",
   projectId: "estacionamento-3634a",
-  storageBucket: "estacionamento-3634a.firebasestorage.app",
+  storageBucket: "estacionamento-3634a.appspot.com",
   messagingSenderId: "1072827896239",
   appId: "1:1072827896239:web:581e0ca9064afe1b41df5a"
 };
