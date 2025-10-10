@@ -43,7 +43,7 @@ function getSession() {
 function requireAuthOrRedirect() {
   const session = getSession();
   if (!session) {
-    window.location.href = "login.html";
+    window.location.href = "../login.html";
     return null;
   }
   return session;
@@ -72,7 +72,7 @@ function renderUserArea() {
   `;
   document.getElementById("btnLogout").addEventListener("click", () => {
     localStorage.removeItem(SESSION_KEY);
-    window.location.href = "login.html";
+    window.location.href = "../login.html";
   });
 }
 
