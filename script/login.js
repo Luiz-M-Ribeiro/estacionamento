@@ -10,7 +10,7 @@ const btnDemo = document.getElementById("btnDemo");
 btnDemo.addEventListener("click", () => {
   const demo = users[0];
   localStorage.setItem("est_session", JSON.stringify(demo));
-  window.location.href = "/public/index.html";
+  window.location.href = "index.html";
 });
 
 form.addEventListener("submit", (e) => {
@@ -23,5 +23,5 @@ form.addEventListener("submit", (e) => {
     return;
   }
   localStorage.setItem("est_session", JSON.stringify(match));
-  window.location.href = "/public/index.html";
+  window.location.href = "index.html";
 });
