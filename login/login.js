@@ -18,10 +18,12 @@ form.addEventListener("submit", (e) => {
   const u = document.getElementById("user").value.trim();
   const p = document.getElementById("pass").value;
   const match = users.find(x => x.username === u && x.password === p);
+  
   if (!match) {
     alert("Usuário ou senha incorretos.");
     return;
   }
+
   localStorage.setItem("est_session", JSON.stringify(match));
   window.location.href = "../index.html";
 });
