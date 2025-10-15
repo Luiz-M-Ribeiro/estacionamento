@@ -43,7 +43,7 @@ function getSession() {
 function requireAuthOrRedirect() {
   const session = getSession();
   if (!session) {
-    window.location.href = "/login.html";
+    window.location.href = "/index.html";
     return null;
   }
   return session;
@@ -63,7 +63,7 @@ function renderUserArea() {
   const userArea = document.getElementById("userArea");
   const session = getSession();
   if (!session) {
-    userArea.innerHTML = `<a class="btn ghost" href="login.html">Entrar</a>`;
+    userArea.innerHTML = `<a class="btn ghost" href="index.html">Entrar</a>`;
     return;
   }
   userArea.innerHTML = `
@@ -72,7 +72,7 @@ function renderUserArea() {
   `;
   document.getElementById("btnLogout").addEventListener("click", () => {
     localStorage.removeItem(SESSION_KEY);
-    window.location.href = "/login.html";
+    window.location.href = "/index.html";
   });
 }
 
