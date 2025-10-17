@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mapa do Estacionamento</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Estacionamento • Map</div>
+    <div class="user-area" id="userArea">
+      <!-- preenchido por JS -->
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="legend">
+        <span class="dot free"></span> Livre
+        <span class="dot occupied"></span> Ocupada
+        <span class="dot reserved"></span> Reservada
+      </div>
+
+      <div class="actions">
+        <div class="counters" style="margin-right:12px">
+          <strong id="countFree">Livre: 0</strong>
+          <span style="margin-left:8px" id="countOccupied">Ocupada: 0</span>
+          <span style="margin-left:8px" id="countReserved">Reservada: 0</span>
+        </div>
+        <button id="btnReset" class="btn ghost">Resetar (padrão)</button>
+        <button id="btnFillRandom" class="btn">Preencher aleatório</button>
+        <button id="btnSyncLocal" class="btn ghost" title="Forçar sincronização com Firestore">Sync</button>
+      </div>
+    </section>
+
+     <section id="parkingMap" class="parking-lot" aria-label="Mapa do estacionamento">
+  <!-- vagas renderizadas por JS -->
+</section>
+
+    <section class="info">
+      <h2>Assuntos</h2>
+      <p>
+        Clique em uma vaga para alternar entre:
+        <strong>Livre → Ocupada → Reservada → Livre</strong>.
+        Clique com o botão direito para editar nota. Mudanças aparecem em tempo real via Firebase.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">Sistema de estacionamento — Demo com Firestore</footer>
+
+  <!-- Firebase SDK (modular) -->
+ 
+  <script type="module" src="script/app.js"></script>
+
+</body>
+</html>
