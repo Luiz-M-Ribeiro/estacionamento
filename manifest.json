@@ -1,7 +1,9 @@
 {
   "name": "estacionamento",
   "short_name": "stop",
+  "description": "Aplicativo de Estacionamento",
   "start_url": "https://github.com/Luiz-M-Ribeiro/estacionamento",
+  "scope": "https://github.com/Luiz-M-Ribeiro/estacionamento",
   "display": "standalone",
   
   "icons": [
